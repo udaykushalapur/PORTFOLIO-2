@@ -1131,6 +1131,20 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .hero-main-row {
+    gap: var(--space-4);
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: none;
+  }
+
+  .hero-photo {
+    width: 160px;
+    height: 160px;
+  }
+
   .contact-info h2 {
     font-size: 2rem;
   }
@@ -1139,13 +1153,15 @@ textarea {
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .header-fixed {
-    width: 95%;
+    width: auto;
+    max-width: 90%;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3);
-    border-radius: var(--radius-lg);
+    gap: 0;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    margin: var(--space-2) auto;
   }
 
   .logo {
@@ -1156,12 +1172,13 @@ textarea {
     display: flex;
     width: auto;
     margin: 0 !important;
-    gap: var(--space-3);
-    justify-content: flex-start;
+    gap: var(--space-2);
+    justify-content: center;
   }
 
   .nav-link {
-    font-size: var(--text-xs);
+    font-size: 0.7rem;
+    padding: var(--space-1) var(--space-2);
   }
 
   .hero-title {
@@ -1174,14 +1191,23 @@ textarea {
   }
 
   .hero-main-row {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: var(--space-4);
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 200px;
+    max-width: none;
   }
 
   .hero-photo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    border-radius: var(--radius-xl);
+    order: 0;
   }
 
   .profile-photo {
