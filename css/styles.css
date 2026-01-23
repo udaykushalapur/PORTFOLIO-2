@@ -1256,7 +1256,7 @@ textarea {
 
   .socials-heading {
     font-size: var(--text-base);
-    margin-bottom: var(--space-2);
+    margin-bottom: -0.5rem;
   }
 
   .social-btn-group {
