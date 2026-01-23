@@ -337,6 +337,8 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: var(--radius-full);
+  width: fit-content;
+  align-self: flex-start;
 }
 
 .badge-available {
@@ -389,7 +391,7 @@ textarea {
 .hero-main-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
@@ -397,6 +399,10 @@ textarea {
 
 .hero-text {
   flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
 }
 
 .hero-photo {
@@ -424,7 +430,7 @@ textarea {
   font-weight: var(--font-extrabold);
   line-height: 1.05;
   color: var(--color-black);
-  margin: var(--space-4) 0;
+  margin-top: auto;
 }
 
 .hero-title span {
@@ -434,6 +440,7 @@ textarea {
 .hero-title span:first-child {
   font-size: 1.5rem;
   font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
 }
 
 .hero-description {
@@ -1145,6 +1152,11 @@ textarea {
 
   .hero-text {
     flex: 1;
+    height: 160px;
+  }
+
+  .hero-main-row {
+    align-items: flex-end;
   }
 
   .hero-photo {
@@ -1154,7 +1166,7 @@ textarea {
 
   .hero-title {
     font-size: 2.5rem;
-    margin: var(--space-3) 0;
+    margin: var(--space-2) 0 0 0;
   }
 
   .hero-title span:first-child {
@@ -1224,7 +1236,7 @@ textarea {
 
   .hero-main-row {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: flex-start;
     gap: var(--space-3);
     flex-wrap: nowrap;
@@ -1233,6 +1245,7 @@ textarea {
   .hero-text {
     flex: 1;
     min-width: 120px;
+    height: 130px;
   }
 
   .hero-photo {
