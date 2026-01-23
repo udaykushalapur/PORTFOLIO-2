@@ -444,7 +444,7 @@ textarea {
 }
 
 .hero-description {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   color: var(--color-gray-500);
   max-width: 100%;
   margin-bottom: var(--space-2);
