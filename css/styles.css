@@ -1301,6 +1301,20 @@ textarea {
     font-size: 1rem;
   }
 
+  .section {
+    padding: var(--space-8) 0;
+    min-height: auto;
+    display: block;
+  }
+
+  .section-home {
+    padding-top: var(--space-20);
+    display: flex;
+    align-items: flex-start;
+  }
+
+
+
   .hero-description {
     font-size: var(--text-sm);
   }
