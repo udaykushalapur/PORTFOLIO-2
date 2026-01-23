@@ -1254,6 +1254,27 @@ textarea {
     justify-content: center;
   }
 
+  .socials-heading {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-2);
+  }
+
+  .social-btn-group {
+    gap: 0.35rem;
+    justify-content: flex-start;
+  }
+
+  .social-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.6rem;
+    gap: 0.25rem;
+  }
+
+  .social-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
   .nav-link {
     font-size: 0.7rem;
     padding: var(--space-1) var(--space-2);
