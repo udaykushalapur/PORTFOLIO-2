@@ -463,7 +463,7 @@ textarea {
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
   color: var(--color-black);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 .socials-heading span {
