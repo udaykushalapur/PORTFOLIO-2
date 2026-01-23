@@ -467,10 +467,10 @@ textarea {
 }
 
 .socials-heading span {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(to right, #38BDF8, #0EA5E9);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   font-weight: var(--font-bold);
 }
 
