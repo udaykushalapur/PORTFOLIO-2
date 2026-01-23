@@ -1308,7 +1308,7 @@ textarea {
   }
 
   .section-home {
-    padding-top: var(--space-20);
+    padding-top: 3.5rem;
     display: flex;
     align-items: flex-start;
   }
