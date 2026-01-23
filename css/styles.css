@@ -657,6 +657,11 @@ textarea {
   color: white;
 }
 
+.social-link.gmail {
+  background: #EA4335;
+  color: white;
+}
+
 .social-link.linkedin {
   background: #0A66C2;
   color: white;
