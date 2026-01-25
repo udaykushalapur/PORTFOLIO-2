@@ -5,15 +5,37 @@ window.portfolioData = {
   // =====================================================
   projects: [
     {
-      id: 'SecurePass-2',
-      title: 'SecurePass - Password Manager',
-      category: 'Web App Design',
-      description: 'A password manager that helps you store and manage your passwords securely.',
-      tags: ['UI/UX', 'Web App', 'Security'],
-      image: 'images/securepass.png',
-      link: 'https://securepass-zeta.vercel.app/login',
-      color: '#fff'
+      id: 'coderev',
+      title: 'CodeRev — AI-Powered Collaborative Code Editor',
+      category: 'Collaborative Code Editor',
+      description: 'Real-time collaborative code editor with multi-user cursors, chat, autosave, and AI-assisted code suggestions using Google Gemini.',
+      tags: ['Next.js', 'Firebase Realtime DB', 'Monaco Editor', 'Gemini API'],
+      image: 'images/coderev.png', // Placeholder, user might need to upload or I use existing
+      liveLink: '#',
+      githubLink: '#',
+      detailsLink: '#'
     },
+    {
+      id: 'atlas-ai',
+      title: 'Atlas AI Assistant — AI-Powered Document Assistant',
+      category: 'AI Document Assistant',
+      description: 'RAG-based document assistant that transforms PDFs into an intelligent, searchable knowledge base. Features AI-powered chat with source citations.',
+      tags: ['React', 'TypeScript', 'Django', 'ChromaDB', 'Ollama', 'Clerk', 'PostgreSQL'],
+      image: 'images/atlas-ai.png',
+      githubLink: '#',
+      detailsLink: '#'
+    },
+    {
+      id: 'krishilog-ai',
+      title: 'KrishiLog AI — Agricultural Intelligence Platform',
+      category: 'Agricultural Platform',
+      description: 'AI-powered agricultural platform that achieved incubation and initial funding opportunity at Code Bharat 2025. Currently paused for strategic pivot.',
+      tags: ['Next.js', 'Supabase', 'Whisper', 'Sarvam', 'Twilio'],
+      image: 'images/krishilog.png',
+      liveLink: '#',
+      githubLink: '#',
+      detailsLink: '#'
+    }
   ],
 
   // =====================================================
