@@ -434,7 +434,7 @@ function renderProjects() {
 }
 
 function renderSkills() {
-    const skillsGrid = document.querySelector('.skills-grid');
+    const skillsGrid = document.querySelector('.skills-stratos-grid');
 
     // Check if portfolioData is available (try window.portfolioData or simple portfolioData)
     const data = window.portfolioData || ((typeof portfolioData !== 'undefined') ? portfolioData : null);
@@ -446,28 +446,16 @@ function renderSkills() {
     // Clear existing content
     skillsGrid.innerHTML = '';
 
-    // Render each skill category from data
-    data.skills.forEach(category => {
-        const skillCategory = document.createElement('div');
-        skillCategory.className = 'skill-category';
+    // Render each skill from flat list
+    data.skills.forEach(skill => {
+        const skillCard = document.createElement('div');
+        skillCard.className = 'stratos-card';
 
-        const skillItems = category.items.map(item => `
-            <div class="skill-item">
-                <span class="skill-name">${item.name} <span>${item.level}%</span></span>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: ${item.level}%;"></div>
-                </div>
-            </div>
-        `).join('');
-
-        skillCategory.innerHTML = `
-            <div class="skill-icon">${category.icon}</div>
-            <h3 class="skill-category-title">${category.title}</h3>
-            <div class="skill-list">
-                ${skillItems}
-            </div>
+        skillCard.innerHTML = `
+            <div class="stratos-icon">${skill.icon}</div>
+            <span class="stratos-name">${skill.name}</span>
         `;
 
-        skillsGrid.appendChild(skillCategory);
+        skillsGrid.appendChild(skillCard);
     });
 }

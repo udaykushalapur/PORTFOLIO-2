@@ -1403,3 +1403,135 @@ textarea {
     padding: var(--space-3);
   }
 }
+
+/* =====================================================
+   NEW SKILLS SECTION REDESIGN
+   ===================================================== */
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .skills-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-12);
+  }
+}
+
+/* Left Column: Text */
+.skills-text {
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .skills-text {
+    max-width: 45%;
+    position: sticky;
+    top: 120px;
+  }
+}
+
+.skills-heading {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: var(--space-6);
+}
+
+.skills-heading br {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .skills-heading {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  .skills-heading br {
+    display: inline;
+  }
+}
+
+.text-highlight {
+  color: #3B82F6;
+  /* Bright Blue */
+}
+
+.skills-description {
+  font-size: var(--text-base);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+/* Right Column: Grid */
+.skills-stratos-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .skills-stratos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .skills-stratos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1.2;
+  }
+}
+
+/* Skill Card */
+.stratos-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  text-align: center;
+  transition: all var(--transition-base);
+  aspect-ratio: 1;
+}
+
+.stratos-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.stratos-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.stratos-card:hover .stratos-icon {
+  transform: scale(1.1);
+}
+
+.stratos-name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-700);
+}
