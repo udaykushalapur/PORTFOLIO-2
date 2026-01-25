@@ -5,7 +5,7 @@ window.portfolioData = {
   // =====================================================
   projects: [
     {
-      id: 'SecurePass',
+      id: 'SecurePass-2',
       title: 'SecurePass - Password Manager',
       category: 'Web App Design',
       description: 'A password manager that helps you store and manage your passwords securely.',
