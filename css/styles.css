@@ -709,6 +709,10 @@ textarea {
   margin-bottom: var(--space-10);
 }
 
+.page-header .badge {
+  margin-bottom: var(--space-8);
+}
+
 .page-title {
   font-family: var(--font-display);
   font-size: var(--text-5xl);
@@ -796,7 +800,7 @@ textarea {
 }
 
 .project-description {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   color: var(--color-gray-500);
   line-height: 1.6;
   margin-bottom: var(--space-4);
@@ -811,11 +815,11 @@ textarea {
 }
 
 .project-tag {
-  padding: 4px 12px;
+  padding: 2px 10px;
   background: var(--color-gray-100);
   border: 1px solid var(--color-gray-200);
   border-radius: var(--radius-md);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--color-gray-700);
   font-weight: var(--font-medium);
 }
@@ -1414,12 +1418,25 @@ textarea {
    NEW SKILLS SECTION REDESIGN
    ===================================================== */
 
+.section-skills .container {
+  max-width: 1200px;
+  /* Widening the container for this section specifically */
+}
+
 .skills-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-10);
   text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .skills-container {
+    gap: var(--space-20);
+    /* Move buttons down on desktop */
+  }
 }
 
 /* Text Column */
@@ -1471,9 +1488,11 @@ textarea {
 .skills-stratos-grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
   width: 100%;
+  max-width: 450px;
+  /* Tightening the 3-column grid */
 }
 
 @media (max-width: 480px) {
@@ -1490,9 +1509,10 @@ textarea {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
   .skills-stratos-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
     width: 100%;
   }
 }
@@ -1502,12 +1522,12 @@ textarea {
   background: var(--color-white);
   border: 1px solid var(--color-gray-200);
   border-radius: var(--radius-xl);
-  padding: var(--space-5);
+  padding: var(--space-2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
+  gap: var(--space-1);
   text-align: center;
   transition: all var(--transition-base);
   aspect-ratio: 1;
@@ -1516,17 +1536,17 @@ textarea {
 
 @media (max-width: 480px) {
   .stratos-card {
-    padding: var(--space-3);
+    padding: var(--space-2);
     border-radius: var(--radius-lg);
   }
 
   .stratos-icon {
-    width: 32px !important;
-    height: 32px !important;
+    width: 24px !important;
+    height: 24px !important;
   }
 
   .stratos-name {
-    font-size: 0.75rem !important;
+    font-size: 0.6rem !important;
   }
 }
 
@@ -1537,8 +1557,8 @@ textarea {
 }
 
 .stratos-icon {
-  width: 48px;
-  height: 48px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1557,7 +1577,7 @@ textarea {
 }
 
 .stratos-name {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   font-weight: var(--font-bold);
   color: var(--color-gray-700);
 }

@@ -6,12 +6,12 @@ window.portfolioData = {
     projects: [
         {
             id: 'smart-attendance-system',
-            title: 'Smart Attendance System',
+            title: 'Smart Attendance System Using Facial Recognition',
             category: 'System Design',
-            description: 'A comprehensive smart attendance system featuring facial recognition, real-time processing, and a centralized dashboard for tracking student attendance.',
-            tags: ['IoT', 'Face Recognition', 'MongoDB', 'System Design'],
+            description: 'An AI-powered attendance management system that uses real-time facial recognition to automatically identify individuals and record attendance accurately.',
+            tags: ['Python', 'FastAPI', 'OpenCV', 'MongoDB'],
             image: 'images/attendance_system.jpg',
-            // liveLink: 'https://example.com', // Add link if available
+            liveLink: 'https://www.linkedin.com/posts/uday-kushalapur-b1a86438a_smart-attendance-system-using-facial-recognition-activity-7420795324325208065-j-xa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF_hB0YBOrWaY609qMW2cYNhr1IgCX5GgjU',
             color: '#fff'
         },
 
