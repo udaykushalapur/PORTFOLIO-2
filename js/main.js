@@ -4,6 +4,10 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Render dynamic content first so elements exist
+    renderProjects();
+    renderSkills();
+
     // Initialize all modules
     initSmoothScrolling();
     initScrollSpy();
@@ -11,10 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initFormHandling();
     initAnimations();
     initSkillBars();
-
-    // Render dynamic content
-    renderProjects();
-    renderSkills();
 
 });
 
