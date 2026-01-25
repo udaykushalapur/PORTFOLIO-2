@@ -285,31 +285,37 @@ textarea {
   gap: var(--space-2);
   padding: var(--space-3) var(--space-6);
   font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  border-radius: var(--radius-full);
+  font-weight: var(--font-bold);
+  border-radius: var(--radius-xl);
+  /* Matching the skill cards */
   transition: all var(--transition-base);
+  letter-spacing: 0.02em;
 }
 
 .btn-primary {
   background: var(--color-black);
   color: var(--color-white);
+  border: 1px solid var(--color-black);
 }
 
 .btn-primary:hover {
   background: var(--color-gray-900);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn-outline {
-  background: transparent;
+  background: var(--color-white);
   color: var(--color-black);
-  border: 2px solid var(--color-black);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-outline:hover {
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--color-white);
+  border-color: var(--color-black);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-teal {
@@ -1411,30 +1417,18 @@ textarea {
 .skills-container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  align-items: center;
+  gap: var(--space-10);
+  text-align: center;
 }
 
-@media (min-width: 900px) {
-  .skills-container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-12);
-  }
-}
-
-/* Left Column: Text */
+/* Text Column */
 .skills-text {
-  flex: 1;
-  max-width: 100%;
-}
-
-@media (min-width: 900px) {
-  .skills-text {
-    max-width: 45%;
-    position: sticky;
-    top: 120px;
-  }
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skills-heading {
@@ -1482,6 +1476,14 @@ textarea {
   width: 100%;
 }
 
+@media (max-width: 480px) {
+  .skills-stratos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns on small phones */
+    gap: var(--space-2);
+  }
+}
+
 @media (min-width: 600px) {
   .skills-stratos-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1490,31 +1492,48 @@ textarea {
 
 @media (min-width: 900px) {
   .skills-stratos-grid {
-    grid-template-columns: repeat(3, 1fr);
-    flex: 1.2;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
   }
 }
 
-/* Skill Card */
+/* Skill Card (Square Style) */
 .stratos-card {
   background: var(--color-white);
   border: 1px solid var(--color-gray-200);
   border-radius: var(--radius-xl);
-  padding: var(--space-4);
+  padding: var(--space-5);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
   text-align: center;
   transition: all var(--transition-base);
   aspect-ratio: 1;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .stratos-card {
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+  }
+
+  .stratos-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .stratos-name {
+    font-size: 0.75rem !important;
+  }
 }
 
 .stratos-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: var(--color-primary);
 }
 
 .stratos-icon {
@@ -1526,12 +1545,19 @@ textarea {
   transition: transform var(--transition-fast);
 }
 
+.stratos-icon svg,
+.stratos-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .stratos-card:hover .stratos-icon {
   transform: scale(1.1);
 }
 
 .stratos-name {
   font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-bold);
   color: var(--color-gray-700);
 }
