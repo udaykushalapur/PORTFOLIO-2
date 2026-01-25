@@ -368,14 +368,9 @@ function renderProjects() {
     // Check if portfolioData is available (try window.portfolioData or simple portfolioData)
     const data = window.portfolioData || ((typeof portfolioData !== 'undefined') ? portfolioData : null);
 
-    console.log('renderProjects called. Data:', data);
-
-    if (!projectsGrid) {
-        console.error('Projects grid container not found!');
-        return;
-    }
+    if (!projectsGrid) return;
     if (!data) {
-        console.error('Portfolio data not found. Make sure data.js is loaded.');
+        console.warn('Portfolio data not found. Make sure data.js is loaded.');
         return;
     }
 
