@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initFormHandling();
     initAnimations();
     initSkillBars();
-    
+
     // Render dynamic content
     renderProjects();
     renderSkills();
@@ -364,26 +364,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function renderProjects() {
     const projectsGrid = document.querySelector('.projects-grid');
-    
+
     // Check if portfolioData is available (try window.portfolioData or simple portfolioData)
     const data = window.portfolioData || ((typeof portfolioData !== 'undefined') ? portfolioData : null);
 
-    if (!projectsGrid) return;
-    if (!data) {
-        console.warn('Portfolio data not found. Make sure data.js is loaded.');
+    console.log('renderProjects called. Data:', data);
+
+    if (!projectsGrid) {
+        console.error('Projects grid container not found!');
         return;
     }
-    
+    if (!data) {
+        console.error('Portfolio data not found. Make sure data.js is loaded.');
+        return;
+    }
+
     // Clear existing content
     projectsGrid.innerHTML = '';
-    
+
     // Render each project from data
     data.projects.forEach(project => {
         const projectCard = document.createElement('a');
         projectCard.className = 'project-card';
         projectCard.href = project.link || '#';
         if (project.link && project.link.startsWith('http')) projectCard.target = '_blank'; // Open external links in new tab
-        
+
         projectCard.innerHTML = `
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%; object-fit: cover;">
@@ -399,29 +404,29 @@ function renderProjects() {
                 </div>
             </div>
         `;
-        
+
         projectsGrid.appendChild(projectCard);
     });
 }
 
 function renderSkills() {
     const skillsGrid = document.querySelector('.skills-grid');
-    
+
     // Check if portfolioData is available (try window.portfolioData or simple portfolioData)
     const data = window.portfolioData || ((typeof portfolioData !== 'undefined') ? portfolioData : null);
 
     if (!skillsGrid) return;
     if (!data) return;
 
-    
+
     // Clear existing content
     skillsGrid.innerHTML = '';
-    
+
     // Render each skill category from data
     data.skills.forEach(category => {
         const skillCategory = document.createElement('div');
         skillCategory.className = 'skill-category';
-        
+
         const skillItems = category.items.map(item => `
             <div class="skill-item">
                 <span class="skill-name">${item.name} <span>${item.level}%</span></span>
@@ -430,7 +435,7 @@ function renderSkills() {
                 </div>
             </div>
         `).join('');
-        
+
         skillCategory.innerHTML = `
             <div class="skill-icon">${category.icon}</div>
             <h3 class="skill-category-title">${category.title}</h3>
@@ -438,7 +443,7 @@ function renderSkills() {
                 ${skillItems}
             </div>
         `;
-        
+
         skillsGrid.appendChild(skillCategory);
     });
 }
