@@ -434,7 +434,7 @@ function renderProjects() {
 }
 
 function renderSkills() {
-    const skillsGrid = document.querySelector('.skills-stratos-grid');
+    const skillsGrid = document.querySelector('.skills-grid');
 
     // Check if portfolioData is available (try window.portfolioData or simple portfolioData)
     const data = window.portfolioData || ((typeof portfolioData !== 'undefined') ? portfolioData : null);
